@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+				 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+        <groupId>com.walterjwhite</groupId>
+        <artifactId>modules</artifactId>
+        <version>0.0.15-SNAPSHOT</version>
+    </parent>
+
+	<groupId>com.walterjwhite.modules</groupId>
+	<artifactId>google</artifactId>
+	<version>0.0.15-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	
+	<name>google</name>
+	<description>google</description>
+	<url>https://github.com/walterjwhite/google</url>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.walterjwhite.infrastructure.dependencies</groupId>
+			<artifactId>google-cloud</artifactId>
+			<version>0.0.15-SNAPSHOT</version>
+			<type>pom</type>
+		</dependency>
+
+		<dependency>
+			<groupId>com.walterjwhite.infrastructure.google-guice.modules</groupId>
+			<artifactId>property</artifactId>
+			<version>0.0.15-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+	<scm>
+		<connection>scm:git:ssh://git@localhost:/projects/active/github.com/java/modules/google.git</connection>
+		<developerConnection>scm:git:ssh://git@localhost:/projects/active/github.com/java/modules/google.git</developerConnection>
+		<url>https://github.com/walterjwhite/google.git</url>
+	    </scm>
+</project>
