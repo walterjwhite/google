@@ -1,8 +1,9 @@
 package com.walterjwhite.google;
 
 import com.google.auth.oauth2.ServiceAccountCredentials;
-import com.walterjwhite.google.guice.property.property.Property;
 import com.walterjwhite.google.property.GoogleCloudAccessToken;
+import com.walterjwhite.property.impl.annotation.Property;
+import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 import javax.inject.Inject;
@@ -16,7 +17,8 @@ public class CredentialsProvider implements Provider<ServiceAccountCredentials> 
       @Property(GoogleCloudAccessToken.class) String googleCloudAccessTokenFilename)
       throws IOException {
     credentials =
-        ServiceAccountCredentials.fromStream(new FileInputStream(googleCloudAccessTokenFilename));
+        ServiceAccountCredentials.fromStream(
+            new BufferedInputStream(new FileInputStream(googleCloudAccessTokenFilename)));
   }
 
   @Override

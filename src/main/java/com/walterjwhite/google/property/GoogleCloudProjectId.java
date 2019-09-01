@@ -1,5 +1,7 @@
 package com.walterjwhite.google.property;
 
-import com.walterjwhite.google.guice.property.property.GuiceProperty;
+import com.walterjwhite.logging.annotation.Sensitive;
+import com.walterjwhite.property.api.property.ConfigurableProperty;
 
-public interface GoogleCloudProjectId extends GuiceProperty {}
+@Sensitive
+public interface GoogleCloudProjectId extends ConfigurableProperty {}

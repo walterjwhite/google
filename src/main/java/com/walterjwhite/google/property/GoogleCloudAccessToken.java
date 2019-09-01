@@ -1,8 +1,10 @@
 package com.walterjwhite.google.property;
 
-import com.walterjwhite.google.guice.property.property.DefaultValue;
-import com.walterjwhite.google.guice.property.property.GuiceProperty;
+import com.walterjwhite.logging.annotation.Sensitive;
+import com.walterjwhite.property.api.annotation.DefaultValue;
+import com.walterjwhite.property.api.property.ConfigurableProperty;
 
-public interface GoogleCloudAccessToken extends GuiceProperty {
+@Sensitive
+public interface GoogleCloudAccessToken extends ConfigurableProperty {
   @DefaultValue String Default = "accessToken.json";
 }
